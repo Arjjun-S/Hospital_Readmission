@@ -5,7 +5,7 @@ from app import preprocess_input, model   # assumes you structured app.py with t
 
 st.set_page_config(page_title="Hospital Readmission Predictor", layout="centered")
 
-st.title("🏥 Hospital Readmission Prediction")
+st.title("Hospital Readmission Prediction")
 st.write("Enter patient details below to predict the risk of readmission.")
 
 # Example inputs - update based on your dataset
@@ -28,8 +28,8 @@ if st.button("Predict Readmission"):
         probability = model.predict_proba(processed)[0][1]
 
         if prediction == 1:
-            st.error(f"⚠️ High Risk of Readmission (Probability: {probability:.2f})")
+            st.error(f"High Risk of Readmission (Probability: {probability:.2f})")
         else:
-            st.success(f"✅ Low Risk of Readmission (Probability: {probability:.2f})")
+            st.success(f"Low Risk of Readmission (Probability: {probability:.2f})")
     except Exception as e:
         st.warning(f"Error during prediction: {e}")
