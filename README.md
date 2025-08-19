@@ -25,7 +25,8 @@ This project predicts whether a patient is likely to be readmitted to the hospit
    venv\Scripts\activate     # on Windows
 
 3.Install dependencies:  
-    ```bash   
+    ```bash 
+    
     pip install -r requirements.txt
 
 ## Running the Project
